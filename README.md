@@ -1,25 +1,34 @@
-# Crossy Road Python
+# Crossy Road Python - Modular Edition
 
-Um clone moderno e modular do clássico jogo Crossy Road (ou Frogger) construído em Python usando a biblioteca Pygame. O jogo apresenta integração completa com assets visuais, sistema de níveis progressivos e suporte a bônus.
+Um clone moderno, modular e visualmente rico do clássico jogo Crossy Road (ou Frogger) construído em Python usando a biblioteca Pygame. O projeto foca em alta fidelidade visual, colisão precisa e progressão de níveis dinâmica.
 
-## 🎮 Funcionalidades
+## 🌟 Novas Funcionalidades (v2.0)
 
-- **Visual Premium**: Utiliza sprites reais para jogador, veículos e ambiente.
-- **Estrutura Modular**: Código organizado em módulos (`src/`) para fácil manutenção.
-- **Sistema de Dificuldade**: A velocidade dos veículos aumenta conforme você avança de nível.
-- **Bônus e Power-ups**: Inclui sistema de vidas extras e escudos de invulnerabilidade.
+- **🍂 Sistema de Estações Dinâmico**: O cenário evolui conforme você avança! A cada 5 níveis, o jogo transita entre **Primavera, Verão, Outono e Inverno**, mudando cores de grama, asfalto e aplicando efeitos visuais (tintura) nas árvores.
+- **🛣️ Rodovias de Pista Dupla**: Novo layout de estradas com pistas duplas e tráfego sincronizado, proporcionando um desafio mais estratégico.
+- **✨ Tecnologia de Imagem Avançada**:
+  - **Auto-Cleaning**: Sistema que detecta e remove fundos sólidos de sprites PNG automaticamente.
+  - **Limpeza por Tolerância**: Remove resquícios de molduras e artefatos de compressão com precisão cirúrgica.
+  - **Tintura Sazonal**: Processamento de imagem em tempo real para colorir a vegetação de acordo com a estação atual.
+- **🎯 Colisão Pixel-Perfect**: Substituição de colisões por caixas (Rect) por **Máscaras de Colisão**, garantindo que você só morra se realmente encostar no desenho do carro.
+
+## 🎮 Funcionalidades Base
+
+- **Vidas e Persistência**: Sistema de até 3 vidas que persistem entre os níveis.
+- **Power-ups**: Coleta de corações (vida extra) e escudos (invencibilidade temporária).
+- **Dificuldade Progressiva**: A velocidade dos veículos e o spawn de obstáculos aumentam com o nível.
 - **Build Automatizado**: Script para gerar executável (.exe) via PyInstaller.
 
 ## 📁 Estrutura do Projeto
 
 - `main.py`: Ponto de entrada do jogo.
 - `src/`: Lógica do jogo dividida em módulos.
-  - `constants.py`: Configurações globais.
-  - `sprites.py`: Classes de personagens e veículos.
-  - `game.py`: Loop principal e gerenciamento de estados.
-  - `utils.py`: Funções auxiliares.
+  - `constants.py`: Definições globais, paletas de cores sazonais e layout.
+  - `sprites.py`: Classes de personagens, veículos (Carros e Ônibus) e itens.
+  - `game.py`: Loop principal, gerenciador de estações e física do jogo.
+  - `utils.py`: Scanner de bordas e processador de assets.
 - `assets/`: Imagens e sons do jogo.
-- `legacy/`: Versões antigas do código para referência.
+- `legacy/`: Versões antigas do código para referência histórica.
 
 ## 🛠️ Instalação e Execução
 
@@ -57,4 +66,4 @@ Para gerar uma versão executável para Windows:
 - **Q**: Sair do jogo.
 
 ---
-*Desenvolvido como um projeto de estudo de Pygame e Arquitetura Modular.*
+*Desenvolvido como um projeto de estudo avançado de Pygame, Processamento de Imagem e Arquitetura Modular.*
